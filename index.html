@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <title>Pomodoro App</title>
+</head>
+<body>
+    <section id="container">
+        <h2>Pomodoro Timer</h2>
+
+        <!-- main pomodoro timer section -->
+        <div id="nav-container">
+            <nav>
+                <ul>
+                    <li class="link-active"><a href="#pomodoro">Work</a></li>
+                    <li><a href="#short-break">Short Break</a></li>
+                    <li><a href="#long-break">Long Break</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="pomodoro">
+            <p class="countdown"><span id="min">00</span id="sec">:<span>00</span></p>
+            <button class="start-btn">Start</button>
+        </div>
+
+        <button class="reset-btn">Reset</button>
+
+        <button class="settings-btn" data-modal-target="#settings-modal"><i class="fas fa-cog"></i></button>
+    </section>
+
+    <!-- settings modal section -->
+    <section id="settings-modal" class="settings-modal active">
+        <div class="modal-header">
+            <h3>Settings</h3>
+            <button data-close-button class="close-button"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-time">
+                <div class="work-title">
+                    <p>Work</p>
+                    <input type="number" id="work-number">
+                </div>
+                <div class="short-break-title">
+                    <p>Short Break</p>
+                    <input type="number" id="short-break-number">
+                </div>
+                <div class="long-break-title">
+                    <p>Long Break</p>
+                    <input type="number" id="long-break-number">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay-active" id="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
