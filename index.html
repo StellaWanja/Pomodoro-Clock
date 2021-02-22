@@ -13,23 +13,24 @@
         <h2>Pomodoro Timer</h2>
 
         <!-- main pomodoro timer section -->
-        <div id="nav-container">
-            <nav>
-                <ul>
-                    <li class="link-active"><a href="#pomodoro">Work</a></li>
-                    <li><a href="#short-break">Short Break</a></li>
-                    <li><a href="#long-break">Long Break</a></li>
-                </ul>
-            </nav>
+        <div id="time-section-container">
+
+            <div id="pomodoro">
+                <h4>Work Time</h4>
+                <p class="countdown"><span id="work-min">00</span>:<span id="work-sec">00</span></p>
+            </div>
+
+            <div id="short-break">
+                <h4>Short Break</h4>
+                <p class="countdown"><span id="short-break-min">00</span>:<span id="short-break-sec">00</span></p>
+                <!-- <button class="start-btn">Start</button> -->
+            </div>
         </div>
 
-        <div id="pomodoro">
-            <p class="countdown"><span id="min">00</span id="sec">:<span>00</span></p>
-            <button class="start-btn">Start</button>
-        </div>
+        <!-- <audio src="https://soundbible.com/mp3/service-bell_daniel_simion.mp3" ></audio> -->
 
+        <button class="start-btn">Start</button>
         <button class="reset-btn">Reset</button>
-
         <button class="settings-btn" data-modal-target="#settings-modal"><i class="fas fa-cog"></i></button>
     </section>
 
@@ -40,21 +41,29 @@
             <button data-close-button class="close-button"><i class="fas fa-times"></i></button>
         </div>
         <div class="modal-body">
+            <h4>Time (Minutes)</h4>
             <div class="input-time">
                 <div class="work-title">
                     <p>Work</p>
-                    <input type="number" id="work-number">
+                    <button class="minus-btn" id="work-minus-btn">-</button>
+                    <span class="time" id="work-number">00</span>
+                    <button class="plus-btn" id="work-plus-btn">+</button>
                 </div>
                 <div class="short-break-title">
                     <p>Short Break</p>
-                    <input type="number" id="short-break-number">
+                    <button class="minus-btn" id="short-break-minus-btn">-</button>
+                    <span class="time" id="short-break-number">00</span>
+                    <button class="plus-btn" id="short-break-plus-btn">+</button>
                 </div>
                 <div class="long-break-title">
                     <p>Long Break</p>
-                    <input type="number" id="long-break-number">
+                    <button class="minus-btn" id="long-break-minus-btn">-</button>
+                    <span class="time" id="long-break-number">00</span>
+                    <button class="plus-btn" id="long-break-plus-btn">+</button>
                 </div>
             </div>
         </div>
+        <button class="apply-btn">Apply</button>
     </section>
 
     <div class="overlay-active" id="overlay"></div>

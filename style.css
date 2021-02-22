@@ -25,43 +25,9 @@ h2{
     text-align: center;
 }
 
-nav{
-    margin-top: 20px;
-    background-color: #101325;
-    border-radius: 30px;
-    box-shadow: 8px 5px 8px #151932;
-}
-
-nav ul{
-    text-align: center;
-}
-
-nav ul li{
-    display: inline-block;
-    list-style-type: none;
-    padding: 15px;
-}
-
-nav ul li:hover{
-    background-color: #e84545;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-nav ul li.link-active{
-    background-color: #e84545;
-    border-radius: 30px;
-}
-
-nav ul li a{
-    color: #fefefe;
-    text-decoration: none;
-}
-
-#pomodoro{
+#time-section-container{
     margin-top: 50px;
-    border-radius: 50%;
-    width: 250px;
+    width: 500px;
     height: 250px;
     display: flex;
     flex-direction: column;
@@ -71,19 +37,27 @@ nav ul li a{
     box-shadow: 0px -2px 20px 10px #272b50;
 }
 
+#pomodoro, #short-break{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .countdown{
     font-size: 3em;
 }
 
 .start-btn{
     background-color: transparent;
-    margin-top: 10px;
+    margin-top: 30px;
     border: none;
     color: #fefefe;
     font-size: 1.2em;
     text-transform: uppercase;
     letter-spacing: 5px;
     outline: none;
+    cursor: pointer;
 }
 
 .reset-btn{
@@ -130,7 +104,7 @@ nav ul li a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #101325;
+    border-bottom: 1px solid rgba(20, 22, 45, .5);
 }
 
 .close-button{
@@ -143,6 +117,30 @@ nav ul li a{
 
 .modal-body{
     padding: 20px;
+}
+
+.modal-body h4{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+
+.apply-btn{
+    background-color: #e84545;
+    outline: none;
+    border: none;
+    color: #fefefe;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1em;
+    position: absolute;
+    bottom: -8%;
+    left: 37%;
+    cursor: pointer;
+}
+
+.apply-btn:hover{
+    background-color: #101325;
 }
 
 #overlay{
@@ -161,10 +159,6 @@ nav ul li a{
     opacity: 1;
     pointer-events: all;
 }
-
-/* .input-time{
-    display: flex;
-} */
 
 /* responsive */
 @media screen and (max-width: 480px){
